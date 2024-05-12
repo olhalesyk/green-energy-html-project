@@ -2,10 +2,10 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //  el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   breakpoints: {
     "@0.00": {
       slidesPerView: 1,
