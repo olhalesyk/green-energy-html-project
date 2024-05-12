@@ -2066,10 +2066,6 @@ h1 {
   font-weight: 500;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -2766,9 +2762,9 @@ h1 {
     padding-bottom: 1.25rem;
   }
 
-  .md\:text-2xl {
+  .md\:text-2xl\/\[1\.5\] {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.5;
   }
 
   .md\:text-5xl {
@@ -2784,16 +2780,6 @@ h1 {
   .md\:text-6xl\/\[1\.25\] {
     font-size: 3.75rem;
     line-height: 1.25;
-  }
-
-  .md\:text-2xl\/\[\] {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:text-2xl\/\[1\.5\] {
-    font-size: 1.5rem;
-    line-height: 1.5;
   }
 }
 
