@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "Figtree", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url(/fonts/Figtree-Regular.ttf) format("ttf");
+  }
+  h1 {
+    @apply text-5xl;
+  }
+}
+@layer components {
+}
+*,
+::before,
+::after {
+  border-color: #d9dedd;
+}
+.container {
+  padding: 0 1rem;
+}
+.default-btn {
+  background-color: transparent;
+  border: 1px solid #022c22;
+  border-radius: 2rem;
+  color: #1d1f1e;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: 1rem 1.5rem;
+}
+.default-btn:hover {
+  background-color: #022c22;
+  color: #ffffff;
+}
+.default-btn:hover svg path {
+  color: #ffffff;
+  stroke: #fff;
+}
+.white-btn {
+  border-color: #fff;
+  color: #fff;
+}
+.white-btn:hover {
+  background-color: #fff;
+  color: #1d1f1e;
+  transition: all 0.5s;
+}
+.active-btn {
+  background-color: #bef264;
+  border-color: #bef264;
+}
+.active-btn:hover {
+  background-color: #a3e635;
+  border-color: #a3e635;
+  transition: all 0.5s;
+}
+.dark-btn {
+  background-color: #022c22;
+  border-color: #022c22;
+  color: #fff;
+}
+.dark-btn {
+  background-color: #064e3b;
+  border-color: #064e3b;
+  transition: all 0.5s;
+}
+.default-btn:hover .animate-right {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@supports (display: grid) {
+}
+/* === Running line custom code === */
+.running-line {
+  overflow: hidden;
+  position: relative;
+  height: 85px;
+}
+
+.running-line div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 85px;
+  transform: translate(100%, 0);
+}
+.running-line .ticker-wrapper__first-half,
+.running-line .ticker-wrapper__second-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: ticker 24s infinite linear forwards;
+}
+.running-line .ticker-wrapper__second-half {
+  animation: 24s ticker 12s infinite linear forwards;
+}
+@keyframes ticker {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+/* === Running line custom code END === */
