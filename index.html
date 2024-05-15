@@ -302,7 +302,7 @@
         <section class="bg-orange-50 m-4 mt-0 rounded-2xl py-12 lg:py-16">
             <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12">
                 <h2
-                    class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-2 border-b text-primary font-medium text-sm mb-6 md:mb-14">
+                    class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-4 border-b text-primary font-medium text-sm mb-6 md:mb-14">
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="4" cy="4" r="4" fill="#BEF264" />
                     </svg>
@@ -339,53 +339,99 @@
         </section>
         <!-- ====== About us Section End -->
         <!-- ====== Team Section Start -->
-        <section class="container mx-auto pt-10 pb-14 lg:py-24">
-            <h3 class="text-4xl md:text-6xl text-primary mb-6">Meet our experts</h3>
-            <p class="mb-10 lg:mb-20">Our team boasts top green energy experts, driving innovation in sustainability.
-            </p>
+        <section class="relative container mx-auto pt-10 pb-14 lg:py-24">
+            <div class="flex flex-wrap justify-between space-y-6 mb-10 lg:mb-20 ">
+                <div>
+                    <h3 class="text-4xl md:text-6xl text-primary mb-6">Meet our experts</h3>
+                    <p>Our team boasts top green energy experts, driving innovation in
+                        sustainability.
+                    </p>
+                </div>
+
+                <div
+                    class="slideer-navigation flex items-center justify-center w-full md:w-auto md:justify-end space-x-2">
+                    <button @click="swiper.slidePrev()"
+                        class="swiper-btn-prev flex justify-center items-center w-10 h-10">
+                        <svg class="w-10 h-10 animate-right stroke-secondary hover:stroke-primary" viewBox="0 0 40 40"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 29.1667L8.33333 20L17.5 10.8333" stroke-width="1.5" />
+                            <path d="M8.33332 20L31.6667 20" stroke-width="1.5" />
+                        </svg>
+                    </button>
+
+                    <button @click="swiper.slideNext()"
+                        class="swiper-btn-next flex justify-center items-center w-10 h-10 ">
+                        <svg class="w-10 h-10 animate-right stroke-secondary hover:stroke-primary" viewBox="0 0 40 40"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.5 10.8333L31.6667 20L22.5 29.1667" stroke-width="1.5" />
+                            <path d="M31.6667 20H8.33334" stroke-width="1.5" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper teamSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Jenny Wilson</p>
-                            <p class="team-item-position">Senior Sustainability Consultant</p>
+                    <div class="swiper-slide relative">
+                        <img class="rounded-2xl" src="imgs/team/Team-Item1-left.jpg" alt="Member image"
+                            class="team-item-image">
+                        <a href="#!">
+                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+                            </div>
+                        </a>
+                        <div class="team-information bg-white rounded-xl absolute bottom-4 inset-x-4 p-4">
+                            <p class="team-item-title text-primary font-medium pb-1">Olha Lesyk</p>
+                            <p class="team-item-position text-sm">Full Stack Developer, Data Expert</p>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item2.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Cameron Williamson</p>
-                            <p class="team-item-position">Senior Sustainability Consultant</p>
+                    <div class="swiper-slide relative">
+                        <img class="rounded-2xl" src="imgs/team/Team-Item2.jpg" alt="Member image"
+                            class="team-item-image">
+                        <a href="#!">
+                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+                            </div>
+                        </a>
+                        <div class="team-information bg-white rounded-xl absolute bottom-4 inset-x-4 p-4">
+                            <p class="team-item-title text-primary font-medium pb-1">Cameron Williamson</p>
+                            <p class="team-item-position text-sm">Senior Sustainability Consultant</p>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item3.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Courtney Henry</p>
-                            <p class="team-item-position">Energy Analysts</p>
+                    <div class="swiper-slide relative">
+                        <img class="rounded-2xl" src="imgs/team/Team-Item3.jpg" alt="Member image"
+                            class="team-item-image">
+                        <a href="#!">
+                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+                            </div>
+                        </a>
+                        <div class="team-information bg-white rounded-xl absolute bottom-4 inset-x-4 p-4">
+                            <p class="team-item-title text-primary font-medium pb-1">Courtney Henry</p>
+                            <p class="team-item-position text-sm">Energy Analysts</p>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item4.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Dianne Russell</p>
-                            <p class="team-item-position">Senior Renewable Energy Engineer</p>
+                    <div class="swiper-slide relative">
+                        <img class="rounded-2xl" src="imgs/team/Team-Item4.jpg" alt="Member image"
+                            class="team-item-image">
+                        <a href="#!">
+                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+                            </div>
+                        </a>
+                        <div class="team-information bg-white rounded-xl absolute bottom-4 inset-x-4 p-4">
+                            <p class="team-item-title text-primary font-medium pb-1">Dianne Russell</p>
+                            <p class="team-item-position text-sm">Senior Renewable Energy Engineer</p>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Jenny Wilson</p>
-                            <p class="team-item-position">Senior Sustainability Consultant</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="imgs/team/Team-Item2.jpg" alt="Member image" class="team-item-image">
-                        <div class="team-information">
-                            <p class="team-item-title">Cameron Williamson</p>
-                            <p class="team-item-position">Senior Sustainability Consultant</p>
+                    <div class="swiper-slide relative">
+                        <img class="rounded-2xl" src="imgs/team/Team-Item.jpg" alt="Member image"
+                            class="team-item-image">
+                        <a href="#!">
+                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+                            </div>
+                        </a>
+                        <div class="team-information bg-white rounded-xl absolute bottom-4 inset-x-4 p-4">
+                            <p class="team-item-title text-primary font-medium pb-1">Jenny Wilson</p>
+                            <p class="team-item-position text-sm">Senior Sustainability Consultant</p>
                         </div>
                     </div>
                 </div>
@@ -393,12 +439,12 @@
             </div>
         </section>
         <!-- ====== Team Section End -->
-        <section class="bg-greensection text-white">
+        <section class="text-primary">
             <section class="container mx-auto grid grid-cols-1 lg:grid-cols-12 pt-10 pb-14 lg:py-24">
                 <div class="lg:col-start-1 lg:col-end-5 mb-9">
                     <h3 class="text-4xl md:text-6xl/[1.25]">What we offer</h3>
                 </div>
-                <div class="px-4 lg:col-start-6 lg:col-end-13">
+                <div class="lg:px-4 lg:col-start-6 lg:col-end-13">
                     <p class="text-justify text-xl md:text-2xl/[1.5] mb-12">At Flow, we're committed
                         to a
                         sustainable
@@ -415,27 +461,116 @@
                 </div>
             </section>
         </section>
-
-
         <!-- ====== Testimonials Section Start -->
-        <!-- <section>
-            <h2
-                class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-2 border-b text-primary font-medium text-sm mb-6 md:mb-14">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4" cy="4" r="4" fill="#BEF264" />
-                </svg>
-                <span>Testimonials</span>
-            </h2>
-            <h3 class="text-4xl md:text-6xl text-primary mb-6">What people say</h3>
-            <div class="testimonials-item">
-                <p>“Flow transformed my energy use. Efficient, green tech, outstanding service!”</p>
-                <div class="testimonials-author">
-                    <img src="imgs/testimonials/client-icon1.jpg" alt="testimonials author">
-                    <p>Jenny Wilson</p>
-                    <p>Solar energy service</p>
+        <section class="bg-greensection py-12 lg:py-16">
+            <div class="container mx-auto">
+                <h2
+                    class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-4 border-b border-white/25 text-white font-medium text-sm mb-10 md:mb-14">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="4" fill="#BEF264" />
+                    </svg>
+                    <span>Testimonials</span>
+                </h2>
+                <div class="">
+                    <h3 class="text-4xl leading-tight md:text-6xl/[1.25] text-white mb-10 md:mb-16">What people say
+                    </h3>
+                    <!-- Swiper -->
+                    <div class="swiper testimonialsSwiper pb-10 md:pb-16">
+                        <div class="swiper-wrapper">
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">“Flow transformed my energy use. Efficient, green
+                                    tech,
+                                    outstanding service!”</p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16" src="imgs/testimonials/client-icon5.jpg"
+                                        alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Dianne Russell</p>
+                                        <p>Solar energy service</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">“Thanks to Flow, my energy is now solar-powered –
+                                    sustainable, efficient, and exceptional service.”</p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16" src="imgs/testimonials/client-icon6.jpg"
+                                        alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Cody Fisher</p>
+                                        <p>Solar energy service</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">“Flow redefined my energy game – green, efficient,
+                                    and top-notch service!”</p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16" src="imgs/testimonials/client-icon7.jpg"
+                                        alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Cameron Williamson</p>
+                                        <p>EV service</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">"The customer service was exceptional, making the
+                                    transition to green energy both smooth and rewarding.
+                                    Highly recommend!"</p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16" src="imgs/testimonials/client-icon8.jpg"
+                                        alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Jenny Wilson</p>
+                                        <p>Solar energy service</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">"The installation process was professional and
+                                    seamless, truly a top-notch experience from start to finish!"
+                                </p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16" src="imgs/testimonials/client-icon9.jpg"
+                                        alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Jenny Wilson</p>
+                                        <p>Solar energy service</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Slide -->
+                            <div class="swiper-slide relative bg-lime-300 text-primary p-10 rounded-2xl">
+                                <p class="text-2xl font-medium mb-10">“Your solar energy service has not only helped us
+                                    cut down on electricity costs but also supports our commitment to
+                                    sustainability.”</p>
+                                <div class="flex items-center space-x-6">
+                                    <img class="rounded-full max-w-16 max-h-16"
+                                        src="imgs/testimonials/client-icon10.jpg" alt="avatar">
+                                    <div>
+                                        <p class="font-medium text-xl p-1">Jenny Wilson</p>
+                                        <p>Solar energy service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar bg-white/60"></div>
+                    </div>
+
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- ====== Testimonials Section End -->
         <section class="container mx-auto pt-10 pb-14 lg:py-32 text-center">
             <p class="text-primary text-4xl md:text-6xl lg:text-[4.75rem]/[1.06] max-w-7xl mx-auto mb-10 lg:mb-16">Our
@@ -448,7 +583,7 @@
         <section class="bg-orange-50 py-12 lg:py-16">
             <div class="container mx-auto mb-8 grid grid-cols-1 lg:grid-cols-12">
                 <h2
-                    class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-2 border-b text-primary font-medium text-sm mb-6 md:mb-14">
+                    class="lg:col-start-1 lg:col-end-13 flex items-center gap-2 pb-4 border-b text-primary font-medium text-sm mb-6 md:mb-14">
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="4" cy="4" r="4" fill="#BEF264" />
                     </svg>
@@ -659,20 +794,22 @@
             <div class="relative grid lg:grid-cols-2 auto-rows-min lg:grid-rows-3 lg:space-x-8">
                 <article class="post-large lg:row-start-1 lg:row-end-4 mb-5">
                     <div class="rounded-2xl overflow-hidden mb-8">
-                        <img class="hover:scale-125 transition duration-500 ease-in-out"
-                            src="imgs/blog/moritz-kindler--SKRzGN47iQ-unsplash.jpg" alt="post img">
+                        <a href="post.html"><img class="hover:scale-125 transition duration-500 ease-in-out"
+                                src="imgs/blog/moritz-kindler--SKRzGN47iQ-unsplash.jpg" alt="post img"></a>
+
                     </div>
 
                     <ul class="post-categories inline-flex space-x-3 mb-4 text-primary text-sm font-medium">
-                        <li class="post-category px-3 py-1 border rounded-full mb-2">Solar Power</li>
-                        <li class="post-category px-3 py-1 border rounded-full mb-2">Solutions</li>
+                        <li class="post-category px-3 py-1 border rounded-full mb-2"><a href="#">Solar Power</a></li>
+                        <li class="post-category px-3 py-1 border rounded-full mb-2"><a href="#">Solutions</a></li>
                     </ul>
-                    <h3 class="text-2xl sm:text-[32px]/[1.25] text-primary font-medium mb-4">Harnessing the Power of the
-                        Sun:
-                        Exploring
-                        the World of Solar Energy
+                    <h3 class="text-2xl sm:text-[32px]/[1.25] text-primary font-medium mb-4">
+                        <a href="post.html">Harnessing the Power of the
+                            Sun:
+                            Exploring
+                            the World of Solar Energy</a>
                     </h3>
-                    <p class="mb-6">Solar energy is revolutionizing the way we
+                    <p class="mb-6"><a href="post.html"></a>Solar energy is revolutionizing the way we
                         power our world.
                         In this
                         blog post, we'll
@@ -680,15 +817,18 @@
                         the incredible potential
                         of solar technology, its environmental benefits, and how you can tap into this sustainable
                         energy source for a brighter
-                        future.</p>
+                        future.</a></p>
                     <div class="flex items-center space-x-3 mb-4">
-                        <img class="rounded-full max-w-10" src="imgs/testimonials/client-icon1.jpg" alt="avatar">
+                        <a href="#">
+                            <img class="rounded-full max-w-10" src="imgs/testimonials/client-icon1.jpg"
+                                alt="avatar"></a>
                         <span class="inline-flex items-center space-x-4 text-primary text-sm leading-tight">
-                            <span
+                            <a href="#"
                                 class="after:text-lowContrast after:text-xl after:content-['•'] after:ml-4 after:leading-tight pb-1">Leslie
-                                Alexander</span>
+                                Alexander</a>
                             <span>9 min read</span>
                         </span>
+
                     </div>
 
                 </article>
@@ -699,7 +839,8 @@
                     </div>
 
                     <div class="flex flex-col flex-wrap">
-                        <h3 class="text-2xl text-primary basis-auto my-4">Wind Power: A Breath of Fresh Air for Clean
+                        <h3 class="text-2xl text-primary basis-auto font-medium my-4">Wind Power: A Breath of Fresh Air
+                            for Clean
                             Energy Enthusiasts
                         </h3>
                         <div class="flex items-center space-x-3">
@@ -721,7 +862,8 @@
                     </div>
 
                     <div class="flex flex-col flex-wrap">
-                        <h3 class="text-2xl text-primary basis-auto my-4">From Trash to Treasure: The Promising World of
+                        <h3 class="text-2xl text-primary basis-auto font-medium my-4">From Trash to Treasure: The
+                            Promising World of
                             Biomass Energy
                         </h3>
                         <div class="flex items-center space-x-3">
@@ -743,7 +885,8 @@
                     </div>
 
                     <div class="flex flex-col flex-wrap">
-                        <h3 class="text-2xl text-primary basis-auto my-4">Hydrogen: Fueling the Green Energy Revolution
+                        <h3 class="text-2xl text-primary basis-auto font-medium my-4">Hydrogen: Fueling the Green Energy
+                            Revolution
                         </h3>
                         <div class="flex items-center space-x-3">
                             <img class="rounded-full max-w-10" src="imgs/testimonials/client-icon2.jpg" alt="avatar">
@@ -823,7 +966,7 @@
         <div class="container mx-auto">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
-                    <a href="javascript:void(0)" class="mb-9 inline-block max-w-[160px]">
+                    <a href="javascript:void(0)" class="mb-9 inline-block max-w-[198px]">
                         <img src="imgs/logo/EverGreenLogo.svg" class="max-w-full" alt="logo" />
                     </a>
                 </div>
