@@ -1344,8 +1344,8 @@ h1 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.list-image-\[url\(imgs\/icons\/lime-dot\.svg\)\] {
-  list-style-image: url(imgs/icons/lime-dot.svg);
+.list-image-\[url\(\/imgs\/icons\/lime-dot\.svg\)\] {
+  list-style-image: url(/imgs/icons/lime-dot.svg);
 }
 
 .break-inside-avoid-column {
