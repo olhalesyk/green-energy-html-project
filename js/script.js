@@ -11,19 +11,19 @@ var swiper = new Swiper(".teamSwiper", {
   //   clickable: true,
   // },
   breakpoints: {
-    "@0.00": {
+    480: {
       slidesPerView: 1,
       spaceBetween: 30,
     },
-    "@0.75": {
+    768: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    "@1.00": {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 30,
     },
-    "@1.5": {
+    1280: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
@@ -43,19 +43,19 @@ var swiper = new Swiper(".testimonialsSwiper", {
   //   clickable: true,
   // },
   breakpoints: {
-    "@0.00": {
+    480: {
       slidesPerView: 1,
       spaceBetween: 30,
     },
-    "@0.75": {
+    768: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    "@1.00": {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 30,
     },
-    "@1.50": {
+    1280: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
