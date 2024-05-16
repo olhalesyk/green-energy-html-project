@@ -1,4 +1,4 @@
-var swiper = new Swiper(".teamSwiper", {
+var swiperTeam = new Swiper(".teamSwiper", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 30,
@@ -29,7 +29,7 @@ var swiper = new Swiper(".teamSwiper", {
     },
   },
 });
-var swiper = new Swiper(".testimonialsSwiper", {
+var swiperTestimonials = new Swiper(".testimonialsSwiper", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 30,
@@ -60,4 +60,32 @@ var swiper = new Swiper(".testimonialsSwiper", {
       spaceBetween: 30,
     },
   },
+});
+
+window.addEventListener("scroll", function () {
+  // Получаем высоту блока с классом grid-block
+  var gridBlock = document.querySelector(".post-content");
+  var gridBlockTop = gridBlock.getBoundingClientRect().top + window.scrollY; // Добавляем смещение по вертикали
+
+  // Получаем высоту верхнего края окна браузера плюс 50px
+  var topOffset = window.scrollY - 120;
+
+  // Проверяем, достиг ли пользователь условия
+  if (gridBlockTop <= topOffset) {
+    // Изменяем цвет текста в блоках sidebar-right и share
+    var sidebarRight = document.querySelector(".sidebar-right");
+    var sidebarLeft = document.querySelector(".sidebar-left");
+
+    sidebarRight.style.color = "#646a69";
+    sidebarRight.style.fill = "#646a69"; // Изменяем цвет текста в блоке sidebar-right
+    sidebarLeft.style.color = "#646a69"; // Изменяем цвет текста в блоке share
+  } else {
+    // Возвращаем исходный цвет текста, если условие не выполнено
+    var sidebarRight = document.querySelector(".sidebar-right");
+    var sidebarLeft = document.querySelector(".sidebar-left");
+
+    sidebarRight.style.color = "";
+    sidebarRight.style.fill = ""; // Возвращаем исходный цвет текста в блоке sidebar-right
+    sidebarLeft.style.color = ""; // Возвращаем исходный цвет текста в блоке share
+  }
 });

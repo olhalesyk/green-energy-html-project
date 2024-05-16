@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./js/**/*.js"],
   theme: {
     extend: {
+      listStyleImage: {
+        checkmark: 'url("/imgs/icons/lime-dot.svg")',
+      },
       gridTemplateColumns: {
         // Simple 16 column grid
         13: "repeat(13, minmax(100px, 1fr))",
