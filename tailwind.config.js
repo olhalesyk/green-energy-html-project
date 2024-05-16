@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./js/**/*.js", "./node_modules/flowbite/**/*.js"],
+  content: ["./index.html", "./js/**/*.js"],
   theme: {
     extend: {
       gridTemplateColumns: {

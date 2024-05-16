@@ -16,6 +16,7 @@
 }
 @layer components {
 }
+
 *,
 ::before,
 ::after {
@@ -58,6 +59,7 @@
   background-color: #a3e635;
   border-color: #a3e635;
   transition: all 0.5s;
+  color: #1d1f1e;
 }
 .dark-btn {
   background-color: #022c22;
@@ -69,11 +71,12 @@
   border-color: #064e3b;
   transition: all 0.5s;
 }
-.default-btn:hover .animate-right {
-  animation: bounce 1s infinite;
+.default-btn:hover .animate-right,
+button:hover .animate-right {
+  animation: bounce-right 1s infinite;
 }
 
-@keyframes bounce {
+@keyframes bounce-right {
   0%,
   100% {
     transform: translateX(0);
@@ -83,6 +86,30 @@
     transform: translateX(25%);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+.default-btn:hover .animate-left,
+button:hover .animate-left {
+  animation: bounce-left 1s infinite;
+}
+@keyframes bounce-left {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.testimonialsSwiper .swiper-scrollbar-drag {
+  background-color: #fff;
+}
+.testimonialsSwiper .swiper-horizontal > .swiper-scrollbar,
+.testimonialsSwiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+  height: 2px;
 }
 @supports (display: grid) {
 }
@@ -96,7 +123,7 @@
 .running-line div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: stretch;
   align-items: center;
   overflow: hidden;
   width: 100%;
